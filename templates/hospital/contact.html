@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+<!--inner banner-->
+
+<!--inner banner End-->
+
+<!--Main Content Start-->
+<div class="main-content">
+  <div class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          {% if messages %}
+          <div class="alert alert-success" id="alert-msg">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <form action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            <div class="contact-form">
+              <div class="col-md-12">
+                <h3>Get in Touch</h3>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Your Name " name="name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Email " name="email" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Phone " name="phone" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Subject" name="subject">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-group">
+                  <textarea placeholder="Your Message " name="message"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-group text-center">
+                  <input type="submit" class="submit-btn" value="Get Contact">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-5">
+          <div class="contact-address">
+            <h5>Contact Information:</h5>
+            <ul>
+              <li> <span class="icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span> <span
+                  class="add-text">Regency Plaza,Near Valdhuni Bridge<br>
+                  Kalyan,<br>
+                  Mumbai</span> </li>
+              <li> <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i> </span> <span class="add-text">0251-2774051<br>
+                  9987171439</span> </li>
+              <li> <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span> <span
+                  class="add-text"><strong>For Inquiry:</strong> info@health360.com</span> </li>
+              <li> <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i> </span> <span
+                  class="add-text"><strong>For Details:</strong> www.Health360.com</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}
