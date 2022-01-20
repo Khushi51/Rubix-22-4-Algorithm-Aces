@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block css_files%}
+<link rel="stylesheet" href="{% static "labtest/confirm_test.css" %}">
+{% endblock css_files %}
+{% block maincontent %}
+<body> 
+
+    <head>
+        <style>
+            .confirm_info{
+
+border: 3px solid grey;
+color: black;
+margin: auto;
+width: 44%;
+border-radius: 2rem;
+padding: 5rem;
+font-size: x-large;
+}
+        
+        </style>
+    </head>
+    <div>
+ 
+ <center style="font-size: 3rem;">Confirmation Page</center>
+        <div class="confirm_info">
+            <form action='' method="POST" >
+                {% csrf_token %}
+                
+                {% comment %} {%for patient in patient_details%} {% endcomment %}
+                <div>
+                  
+                    <br>
+                    Lab test: <textarea name="labtest" id="" cols="30" rows="10" style="height: 4rem;" >{{test.name}}</textarea> 
+
+                    <p>Rs. {{test.price}}</p>
+                </div>
+                {% comment %} {%endfor%} {% endcomment %}
+                
+                <button  type="submit"> 
+                    Confirm Booking
+                </button>
+                <!-- <input type="submit" value="ok"> -->
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
+{% endblock maincontent %}

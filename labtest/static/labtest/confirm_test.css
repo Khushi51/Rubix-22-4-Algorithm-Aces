@@ -1,0 +1,10 @@
+.confirm_info{
+
+    border: 3px solid grey;
+    color: black;
+    margin: auto;
+    width: 44%;
+    border-radius: 2rem;
+    padding: 5rem;
+    font-size: x-large;
+}

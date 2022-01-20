@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block css_files%}
+
+<link rel="stylesheet" href="{% static "labtest/tests_list.css" %}">
+
+
+{% endblock css_files %}
+{% block maincontent %}
+<body>  
+    <head>
+        <style>
+            #ul_li{
+    border: 1px solid rgb(195 195 195);
+    margin: 1rem;
+    border-radius: 0.7rem;
+    overflow:hidden;
+    padding: 1rem;
+    font-weight: bold;
+    width: 46%;
+}
+
+li{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+
+#li_btn{
+    background-color: #10847e;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border-block: none;
+    width: 14rem;
+    height: 4rem;
+    border-radius: 12px;
+    padding: 9px 0 9px 0;
+    margin-left: 54rem;
+}
+
+
+
+        </style>
+    </head>
+    <ul class="ul_tag">
+        {%for test in tests_list%}
+        <div id="ul_li">
+        <li>{{test.name}}</li>
+        Rs. {{test.price}}
+        {% if selected is False %}
+        <a href="{%url "confirm-test" test.id%}"><button id="li_btn">Select</button></a>
+
+        {%elif selected is True%}
+        <button id="li_btn">Remove</button>
+        {%endif%}
+        </div>
+        {%endfor%}
+    </ul>
+</body>
+</html>
+{% endblock maincontent %}
