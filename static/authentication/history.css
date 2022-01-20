@@ -1,0 +1,9 @@
+#history{
+    border: 0.2rem solid black;
+    margin: auto;
+    width: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+}

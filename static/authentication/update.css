@@ -1,0 +1,34 @@
+.card {
+  padding-top: 5rem;
+  box-shadow: 0 2px 8px rgb(118, 118, 209);
+  border-radius: 1.2rem;
+  background-color: white;
+  margin: 5rem 40rem 1rem 34rem;
+  width: 33%;
+  height: 22rem;
+}
+/* label {
+    cursor: default;
+    font: bold;
+} */
+.content {
+  font-weight: bold;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  /* bottom: 40%; */
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  color: rgba(0, 0, 167, 0.747);
+  justify-content: center;
+  margin: auto;
+}
+#btn {
+  background-color: rgb(38, 38, 187);
+  color: white;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  font-size: large;
+  font-weight: bold;
+}

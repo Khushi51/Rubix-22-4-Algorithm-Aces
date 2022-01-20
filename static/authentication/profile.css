@@ -1,0 +1,107 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap"); */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* .card {
+    padding: 10rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 1.2rem;
+    background-color: white;
+    margin: 8rem 32rem 2rem 34rem;
+} */
+.card {
+  padding-top: 0rem;
+  box-shadow: 0 2px 8px rgb(118, 118, 209);
+  border-radius: 1.2rem;
+  background-color: white;
+  margin: 6rem 40rem 1rem 34rem;
+  width: 25%;
+  height: 23rem;
+}
+.profile {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: rgba(0, 0, 167, 0.747);
+  justify-content: center;
+  margin: auto;
+}
+h2 {
+  text-decoration-color: rgb(31, 31, 117);
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  border-style: solid red;
+}
+
+#main-navigation-teena {
+  margin-top: 5rem;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 167, 0.747);
+}
+
+#main-navigation-teena a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+#main-navigation-teena a:hover,
+#main-navigation-teena a:active {
+  color: red;
+}
+#updatebtn a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size:medium;
+  
+}
+#updatebtn a:hover,
+#updatebtn a:active{
+  color:red
+}
+h3 a {
+  text-decoration: none;
+  /* color:white;
+    background-color: blue;
+    font-weight: bold;
+    margin-left: 5rem;
+    border-style: solid;
+    width: 20%;
+    border-width: 0.3rem;
+    border-radius: 0.5rem; */
+  background-color: rgb(38, 38, 187);
+  color: white;
+  margin-top: 1rem;
+  border-radius: 0.1rem;
+  margin-left: 5rem;
+}
+
+#main-navigation-teena h3 {
+  color: white;
+}
